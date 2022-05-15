@@ -12,3 +12,5 @@ PyTorch v1.11.0+cu113, dill v0.3.4, matplotlib v3.5.2, numpy v.1.22.3 and Tensor
 
 Original Model: 
 http://cl-informatik.uibk.ac.at/cek/holstep/
+
+Run the main.py to generate vocab files and train the model, then run plot.py to see the results. 
