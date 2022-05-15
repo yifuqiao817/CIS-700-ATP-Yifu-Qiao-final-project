@@ -25,7 +25,7 @@ for i in range(3):
     test_loss = torch.load('./loss/test_loss_rep{}.pt'.format(i))
 
     # short, training
-    plt.subplot(3, 5, i*5 + 1)
+    plt.subplot(2, 3, 1)
     t_loss_short= [x.to("cpu") for x in t_loss_short]
     # plt.scatter(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in t_loss_short])
     plt.plot(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in t_loss_short])
@@ -34,7 +34,7 @@ for i in range(3):
     plt.title('training (short, rep {})'.format(i+1))
 
     # short, validation
-    plt.subplot(3, 5, i*5 + 2)
+    plt.subplot(2, 3, 2)
     v_loss_short= [x.to("cpu") for x in v_loss_short]
     # plt.scatter(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in v_loss_short])
     plt.plot(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in v_loss_short])
@@ -43,7 +43,7 @@ for i in range(3):
     plt.title('validation (short, rep {})'.format(i+1))
 
     # long, training
-    plt.subplot(3, 5, i*5 + 3)
+    plt.subplot(2, 3, 3)
     t_loss_long= [x.to("cpu") for x in t_loss_long]
     # plt.scatter(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in t_loss_long])
     plt.plot(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in t_loss_long])
@@ -52,7 +52,7 @@ for i in range(3):
     plt.title('training (long, rep {})'.format(i+1))
 
     # long, validation
-    plt.subplot(3, 5, i*5 + 4)
+    plt.subplot(2, 3, 4)
     v_loss_long= [x.to("cpu") for x in v_loss_long]
     # plt.scatter(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in v_loss_long])
     plt.plot(np.arange(hyper_para['epochs']) + 1, [l.detach().numpy() for l in v_loss_long])
@@ -61,7 +61,7 @@ for i in range(3):
     plt.title('validation (long, rep {})'.format(i+1))
 
     # test
-    plt.subplot(3, 5, i*5 + 5)
+    plt.subplot(2, 3, 5)
     # plt.scatter(np.arange(len(test_loss)) + 1, [l.detach().numpy() for l in test_loss])
     plt.plot(np.arange(len(test_loss)) + 1, [l.detach().numpy() for l in test_loss])
     plt.xlabel('the number of validation samples')
