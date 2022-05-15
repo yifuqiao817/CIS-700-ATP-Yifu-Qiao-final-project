@@ -13,10 +13,10 @@ class cnn_1d_lstm(nn.Module):
         self.conv1d_2 = nn.Conv1d(256, 256, 7)
         self.MaxPool1d_2 = nn.MaxPool1d(5, stride=5)
         self.lstm = nn.LSTM(256, 256, batch_first=True) 
-        self.linear_256 = nn.Linear(256, 64) #*********
+        self.linear_256 = nn.Linear(256, 128) 
         self.relu = nn.ReLU()
         self.dropout =nn.Dropout()
-        self.linear_1 = nn.Linear(64, 1) #********
+        self.linear_1 = nn.Linear(128, 1)
         self.sigmoid = nn.Sigmoid()
     
     def forward(self, x):
